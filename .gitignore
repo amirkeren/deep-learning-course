@@ -1,7 +1,6 @@
 .DS_Store
 .ipynb_checkpoints/
-checkpoint
+model/
+train/
+test/
 covtype.data
-saver.data-*
-saver.index
-saver.meta
