@@ -1,6 +1,5 @@
 .DS_Store
 .ipynb_checkpoints/
 model/
-train/
-test/
+tensorboard/
 covtype.data
