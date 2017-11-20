@@ -3,3 +3,4 @@
 model/
 tensorboard/
 covtype.data
+*.pyc
