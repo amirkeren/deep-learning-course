@@ -2,7 +2,7 @@
 .ipynb_checkpoints/
 model/
 tensorboard/
-covtype.data
+covtype.data*
 *.pyc
 *.log
 *.out
