@@ -4,3 +4,5 @@ model/
 tensorboard/
 covtype.data
 *.pyc
+*.log
+*.out

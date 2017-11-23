@@ -19,6 +19,7 @@ def print_stats(session, epoch, train_features, train_labels, valid_features,
     test_summary_writer.add_summary(session.run(summary_op, feed_valid), epoch)
     test_summary_writer.flush()
     print 'Epoch {:>2}: '.format(epoch + 1) + 'loss: %.4f' % loss, 'accuracy: %.3f' % accuracy
+    return loss, accuracy
     
 def clear_model(save_model_path, tensorboard_path):
     if os.path.exists(save_model_path):
