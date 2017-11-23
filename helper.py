@@ -9,7 +9,8 @@ def get_batch(X, y, current_batch_index, batch_size):
     return batch_features, batch_labels
 
 def print_stats(session, epoch, train_features, train_labels, valid_features, 
-                valid_labels, loss, accuracy, x_tensor, y_tensor, keep_prob_tensor, summary_op, train_summary_writer, test_summary_writer):
+                valid_labels, loss, accuracy, x_tensor, y_tensor, keep_prob_tensor, 
+                summary_op, train_summary_writer, test_summary_writer):
     feed_loss = { x_tensor: train_features, y_tensor: train_labels, keep_prob_tensor: 1.0 }
     feed_valid = { x_tensor: valid_features, y_tensor: valid_labels, keep_prob_tensor: 1.0 }
     loss = session.run(loss, feed_loss)
