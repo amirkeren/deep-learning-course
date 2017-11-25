@@ -42,7 +42,7 @@ def download_file(url) :
         r = requests.get(url, stream=True)
         total_length = int(r.headers.get('content-length'))
         dl = 0
-        if total_length is None: # no content length header
+        if total_length is None:
             f.write(r.content)
         else:
             for chunk in r.iter_content(1024):
@@ -50,7 +50,7 @@ def download_file(url) :
                 f.write(chunk)
                 done = int(50 * dl / total_length)
                 clear_output(wait=True)
-                print "\r[%s%s] %s bps" % ('=' * done, ' ' * (50 - done), 
-                    dl // (time.clock() - start))
-                print ''
+                print_console_log("\r[%s%s] %s bps" % ('=' * done, ' ' * (50 - done), 
+                    dl // (time.clock() - start)))
+                print_console_log('')
     return (time.clock() - start)
