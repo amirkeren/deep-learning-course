@@ -1,5 +1,5 @@
-.DS_Store
-.ipynb_checkpoints/
+**/.DS_Store
+**/.ipynb_checkpoints/
 model/
 tensorboard/
 covtype.data*
@@ -7,3 +7,7 @@ covtype.data*
 *.log
 *.out
 deep-learning-ex1.py
+**/imagenet-vgg-verydeep-19.mat
+**/checkpoints/*
+**/graphs/*
+**/outputs/*
