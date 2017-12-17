@@ -7,7 +7,7 @@ covtype.data*
 *.log
 *.out
 deep-learning-ex1.py
-**/imagenet-vgg-verydeep-19.mat
+**/*.mat
 **/checkpoints/*
 **/graphs/*
 **/outputs/*
