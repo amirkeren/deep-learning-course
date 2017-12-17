@@ -8,6 +8,7 @@ covtype.data*
 *.out
 deep-learning-ex1.py
 **/*.mat
+**/resized_*
 **/checkpoints/*
 **/graphs/*
 **/outputs/*
