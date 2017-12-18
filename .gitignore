@@ -6,6 +6,8 @@ covtype.data*
 *.pyc
 *.log
 *.out
+**/*.gz
+**/inception_v3_2016_08_28
 deep-learning-ex1.py
 **/*.mat
 **/resized_*
