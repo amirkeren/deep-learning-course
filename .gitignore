@@ -7,7 +7,7 @@ covtype.data*
 *.log
 *.out
 **/*.gz
-**/inception_v3_2016_08_28
+**/*.ckpt
 deep-learning-ex1.py
 **/*.mat
 **/resized_*
