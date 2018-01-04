@@ -3,4 +3,5 @@ Run `pip install -r requirements.txt` to install required packages and then run 
 * GOOGLENET 
 * VGG16 
 * VGG19
+
 See exercise presentation [here](https://docs.google.com/presentation/d/1nTW3bi_o7OJjv-NMRgAYNSc26vBm5LSRGR2OA79iLaE/edit?usp=sharing)
