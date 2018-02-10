@@ -14,3 +14,4 @@ deep-learning-ex1.py
 **/checkpoints/*
 **/graphs/*
 **/outputs/*
+**/cifar10_data
