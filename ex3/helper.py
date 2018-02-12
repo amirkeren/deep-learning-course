@@ -3,6 +3,7 @@ import tarfile
 import requests
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 from os.path import isfile, isdir
 from tqdm import tqdm
@@ -58,12 +59,26 @@ def load_preprocess_testing():
     return pickle.load(open('preprocess_test.p', mode='rb'))
 
 
+def load_preprocess_validation():
+    return pickle.load(open('preprocess_validation.p', mode='rb'))
+
+
 def load_cfar10_batch(cifar10_dataset_folder_path, batch_id):
     with open(cifar10_dataset_folder_path + '/data_batch_' + str(batch_id), mode='rb') as f:
         batch = pickle.load(f)
     features = batch['data'].reshape((len(batch['data']), 3, 32, 32)).transpose(0, 2, 3, 1)
     labels = batch['labels']
     return features, labels
+
+
+def show_images(in_imgs, reconstructed):
+    fig, axes = plt.subplots(nrows=2, ncols=10, sharex=True, sharey=True, figsize=(32, 4))
+    for images, row in zip([in_imgs, reconstructed], axes):
+        for img, ax in zip(images, row):
+            ax.imshow(img.reshape((32, 32, 3)))
+            ax.get_xaxis().set_visible(False)
+            ax.get_yaxis().set_visible(False)
+    fig.tight_layout(pad=0.1)
 
 
 def _normalize(image):
