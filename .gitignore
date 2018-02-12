@@ -16,3 +16,5 @@ deep-learning-ex1.py
 **/outputs/*
 **/cifar10_data
 **/.idea/*
+**/*.p
+**/cifar-10-batches-py/
