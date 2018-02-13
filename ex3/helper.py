@@ -73,7 +73,7 @@ def load_cfar10_batch(cifar10_dataset_folder_path, batch_id):
 
 def show_images(in_imgs, reconstructed):
     fig, axes = plt.subplots(nrows=2, ncols=10, sharex=True, sharey=True, figsize=(32, 4))
-    for images, row in zip([in_imgs, reconstructed], axes):
+    for images, row in zip([reconstructed, in_imgs], axes):
         for img, ax in zip(images, row):
             ax.imshow(img.reshape((32, 32, 3)))
             ax.get_xaxis().set_visible(False)
