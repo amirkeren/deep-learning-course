@@ -1,6 +1,5 @@
 **/.DS_Store
 **/.ipynb_checkpoints/
-model/
 tensorboard/
 covtype.data*
 *.pyc
@@ -12,9 +11,11 @@ deep-learning-ex1.py
 **/*.mat
 **/resized_*
 **/checkpoints/*
+**/checkpoint
 **/graphs/*
 **/outputs/*
 **/cifar10_data
 **/.idea/*
 **/*.p
 **/cifar-10-batches-py/
+**/model*
