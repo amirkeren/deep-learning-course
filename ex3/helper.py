@@ -55,6 +55,11 @@ def load_preprocess_training_batch(batch_id, batch_size):
     return _batch_features_labels(features, noisy_features, labels, batch_size)
 
 
+def load_testing_batch(batch_size):
+    features, noisy_features, labels = pickle.load(open('preprocess_test.p', mode='rb'))
+    return _batch_features_labels(features, noisy_features, labels, batch_size)
+
+
 def load_preprocess_testing():
     return pickle.load(open('preprocess_test.p', mode='rb'))
 
