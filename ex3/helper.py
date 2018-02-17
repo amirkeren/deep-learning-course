@@ -93,7 +93,7 @@ def print_stats(epoch, session, inputs, feature_batch, targets, label_batch,
     cost = session.run(cost, feed_cost)
     accuracy = session.run(accuracy, feed_valid)
     print('Epoch {:>2}:  '.format(epoch + 1))
-    print("cost: %.2f" % cost, "accuracy: %.2f" % accuracy)
+    print("cost: %.4f" % cost, "accuracy: %.4f" % accuracy)
     pass
 
 
