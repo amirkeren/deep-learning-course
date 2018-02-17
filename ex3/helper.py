@@ -86,6 +86,17 @@ def show_images(in_imgs, noisy_imgs, reconstructed):
     fig.tight_layout(pad=0.1)
 
 
+def print_stats(epoch, session, inputs, feature_batch, targets, label_batch,
+                valid_features, valid_labels, keep_prob, cost, accuracy):
+    feed_cost = {inputs: feature_batch, targets: label_batch, keep_prob: 1.0}
+    feed_valid = {inputs: valid_features, targets: valid_labels, keep_prob: 1.0}
+    cost = session.run(cost, feed_cost)
+    accuracy = session.run(accuracy, feed_valid)
+    print('Epoch {:>2}:  '.format(epoch + 1))
+    print("cost: %.2f" % cost, "accuracy: %.2f" % accuracy)
+    pass
+
+
 def _normalize(image):
     image = np.float64(image)
     image /= 255.0
