@@ -1,6 +1,7 @@
 import pickle
 import tarfile
 import requests
+import random
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -95,6 +96,17 @@ def print_stats(epoch, session, inputs, feature_batch, targets, label_batch,
     print('Epoch {:>2}:  '.format(epoch + 1))
     print("cost: %.4f" % cost, "accuracy: %.4f" % accuracy)
     pass
+
+
+def show_images_simple(images, is_random=True):
+    plt.figure(figsize=(32, 2))
+    for i in range(10):
+        ax = plt.subplot(1, 10, i + 1)
+        plt.axis('off')
+        if is_random:
+            plt.imshow(images[i + random.randint(0, len(images) - 10)])
+        else:
+            plt.imshow(images[i].reshape([32, 32, 3]))
 
 
 def _normalize(image):
